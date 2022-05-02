@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Veicoli
 {
-    public class Train : IVehicle
+    public class Train : IVehicle, PeopleTransport
     {
-        public object GetName => throw new NotImplementedException();
+       public string GetName (){ return "treno"; }
 
-        public string TransportType(IVehicle vehicle)
+        
+
+        public string TransportType(PeopleTransport train)
         {
             return $"sono un veicolo di tipo {vehicle.GetName}";
         }
